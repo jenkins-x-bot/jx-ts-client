@@ -4,6 +4,7 @@ export * from './appList';
 export * from './appSpec';
 export * from './approve';
 export * from './attachment';
+export * from './batchPipelineActivity';
 export * from './binary';
 export * from './branchProtectionContextPolicy';
 export * from './brancher';
@@ -22,6 +23,7 @@ export * from './configMapSpec';
 export * from './configUpdater';
 export * from './contextPolicy';
 export * from './coreActivityStep';
+export * from './dependencyUpdate';
 export * from './environment';
 export * from './environmentFilter';
 export * from './environmentList';
@@ -162,11 +164,14 @@ export * from './lgtm';
 export * from './measurement';
 export * from './merger';
 export * from './original';
+export * from './periodic';
+export * from './periodics';
 export * from './pipelineActivity';
 export * from './pipelineActivityList';
 export * from './pipelineActivitySpec';
 export * from './pipelineActivityStatus';
 export * from './pipelineActivityStep';
+export * from './pipelineExtension';
 export * from './pipelineStructure';
 export * from './pipelineStructureList';
 export * from './pipelineStructureStage';
@@ -185,6 +190,7 @@ export * from './promoteUpdateStep';
 export * from './promoteWorkflowStep';
 export * from './protectionPolicies';
 export * from './protectionPolicy';
+export * from './pullRequestInfo';
 export * from './query';
 export * from './quickStartLocation';
 export * from './regexpChangeMatcher';
@@ -223,6 +229,7 @@ export * from './user';
 export * from './userDetails';
 export * from './userList';
 export * from './userSpec';
+export * from './welcome';
 export * from './workflow';
 export * from './workflowList';
 export * from './workflowPreconditions';
@@ -238,6 +245,7 @@ import { AppList } from './appList';
 import { AppSpec } from './appSpec';
 import { Approve } from './approve';
 import { Attachment } from './attachment';
+import { BatchPipelineActivity } from './batchPipelineActivity';
 import { Binary } from './binary';
 import { BranchProtectionContextPolicy } from './branchProtectionContextPolicy';
 import { Brancher } from './brancher';
@@ -256,6 +264,7 @@ import { ConfigMapSpec } from './configMapSpec';
 import { ConfigUpdater } from './configUpdater';
 import { ContextPolicy } from './contextPolicy';
 import { CoreActivityStep } from './coreActivityStep';
+import { DependencyUpdate } from './dependencyUpdate';
 import { Environment } from './environment';
 import { EnvironmentFilter } from './environmentFilter';
 import { EnvironmentList } from './environmentList';
@@ -396,11 +405,14 @@ import { Lgtm } from './lgtm';
 import { Measurement } from './measurement';
 import { Merger } from './merger';
 import { Original } from './original';
+import { Periodic } from './periodic';
+import { Periodics } from './periodics';
 import { PipelineActivity } from './pipelineActivity';
 import { PipelineActivityList } from './pipelineActivityList';
 import { PipelineActivitySpec } from './pipelineActivitySpec';
 import { PipelineActivityStatus } from './pipelineActivityStatus';
 import { PipelineActivityStep } from './pipelineActivityStep';
+import { PipelineExtension } from './pipelineExtension';
 import { PipelineStructure } from './pipelineStructure';
 import { PipelineStructureList } from './pipelineStructureList';
 import { PipelineStructureStage } from './pipelineStructureStage';
@@ -419,6 +431,7 @@ import { PromoteUpdateStep } from './promoteUpdateStep';
 import { PromoteWorkflowStep } from './promoteWorkflowStep';
 import { ProtectionPolicies } from './protectionPolicies';
 import { ProtectionPolicy } from './protectionPolicy';
+import { PullRequestInfo } from './pullRequestInfo';
 import { Query } from './query';
 import { QuickStartLocation } from './quickStartLocation';
 import { RegexpChangeMatcher } from './regexpChangeMatcher';
@@ -457,6 +470,7 @@ import { User } from './user';
 import { UserDetails } from './userDetails';
 import { UserList } from './userList';
 import { UserSpec } from './userSpec';
+import { Welcome } from './welcome';
 import { Workflow } from './workflow';
 import { WorkflowList } from './workflowList';
 import { WorkflowPreconditions } from './workflowPreconditions';
@@ -486,6 +500,7 @@ let typeMap: {[index: string]: any} = {
     "AppSpec": AppSpec,
     "Approve": Approve,
     "Attachment": Attachment,
+    "BatchPipelineActivity": BatchPipelineActivity,
     "Binary": Binary,
     "BranchProtectionContextPolicy": BranchProtectionContextPolicy,
     "Brancher": Brancher,
@@ -504,6 +519,7 @@ let typeMap: {[index: string]: any} = {
     "ConfigUpdater": ConfigUpdater,
     "ContextPolicy": ContextPolicy,
     "CoreActivityStep": CoreActivityStep,
+    "DependencyUpdate": DependencyUpdate,
     "Environment": Environment,
     "EnvironmentFilter": EnvironmentFilter,
     "EnvironmentList": EnvironmentList,
@@ -644,11 +660,14 @@ let typeMap: {[index: string]: any} = {
     "Measurement": Measurement,
     "Merger": Merger,
     "Original": Original,
+    "Periodic": Periodic,
+    "Periodics": Periodics,
     "PipelineActivity": PipelineActivity,
     "PipelineActivityList": PipelineActivityList,
     "PipelineActivitySpec": PipelineActivitySpec,
     "PipelineActivityStatus": PipelineActivityStatus,
     "PipelineActivityStep": PipelineActivityStep,
+    "PipelineExtension": PipelineExtension,
     "PipelineStructure": PipelineStructure,
     "PipelineStructureList": PipelineStructureList,
     "PipelineStructureStage": PipelineStructureStage,
@@ -667,6 +686,7 @@ let typeMap: {[index: string]: any} = {
     "PromoteWorkflowStep": PromoteWorkflowStep,
     "ProtectionPolicies": ProtectionPolicies,
     "ProtectionPolicy": ProtectionPolicy,
+    "PullRequestInfo": PullRequestInfo,
     "Query": Query,
     "QuickStartLocation": QuickStartLocation,
     "RegexpChangeMatcher": RegexpChangeMatcher,
@@ -705,6 +725,7 @@ let typeMap: {[index: string]: any} = {
     "UserDetails": UserDetails,
     "UserList": UserList,
     "UserSpec": UserSpec,
+    "Welcome": Welcome,
     "Workflow": Workflow,
     "WorkflowList": WorkflowList,
     "WorkflowPreconditions": WorkflowPreconditions,
