@@ -11,6 +11,7 @@
  */
 
 import { CommitSummary } from './commitSummary';
+import { DependencyUpdate } from './dependencyUpdate';
 import { IssueSummary } from './issueSummary';
 
 /**
@@ -18,6 +19,7 @@ import { IssueSummary } from './issueSummary';
 */
 export interface ReleaseSpec {
     'commits'?: Array<CommitSummary>;
+    'dependencyUpdates'?: Array<DependencyUpdate>;
     'gitCloneUrl'?: string;
     'gitHttpUrl'?: string;
     'gitOwner'?: string;
@@ -35,6 +37,11 @@ export interface ReleaseSpec {
             "name": "commits",
             "baseName": "commits",
             "type": "Array<CommitSummary>"
+        },
+        {
+            "name": "dependencyUpdates",
+            "baseName": "dependencyUpdates",
+            "type": "Array<DependencyUpdate>"
         },
         {
             "name": "gitCloneUrl",
