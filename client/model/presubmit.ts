@@ -42,7 +42,7 @@ export interface Presubmit {
     */
     'optional'?: boolean;
     'policy'?: ProtectionPolicies;
-    'query'?: Query;
+    'queries'?: Array<Query>;
     /**
     * Report enables reporting the job status on the git provider
     */
@@ -105,9 +105,9 @@ export interface Presubmit {
             "type": "ProtectionPolicies"
         },
         {
-            "name": "query",
-            "baseName": "query",
-            "type": "Query"
+            "name": "queries",
+            "baseName": "queries",
+            "type": "Array<Query>"
         },
         {
             "name": "report",
