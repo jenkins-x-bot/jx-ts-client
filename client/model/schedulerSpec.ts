@@ -11,32 +11,38 @@
  */
 
 import { Approve } from './approve';
+import { Attachment } from './attachment';
 import { ConfigUpdater } from './configUpdater';
 import { GlobalProtectionPolicy } from './globalProtectionPolicy';
 import { Lgtm } from './lgtm';
 import { Merger } from './merger';
+import { Periodics } from './periodics';
 import { Postsubmits } from './postsubmits';
 import { Presubmits } from './presubmits';
 import { ReplaceableSliceOfExternalPlugins } from './replaceableSliceOfExternalPlugins';
 import { ReplaceableSliceOfStrings } from './replaceableSliceOfStrings';
 import { SchedulerAgent } from './schedulerAgent';
 import { Trigger } from './trigger';
+import { Welcome } from './welcome';
 
 /**
 * SchedulerSpec defines the pipeline scheduler (e.g. Prow) configuration
 */
 export interface SchedulerSpec {
     'approve'?: Approve;
+    'attachments'?: Array<Attachment>;
     'configUpdater'?: ConfigUpdater;
     'externalPlugins'?: ReplaceableSliceOfExternalPlugins;
     'lgtm'?: Lgtm;
     'merger'?: Merger;
+    'periodics'?: Periodics;
     'plugins'?: ReplaceableSliceOfStrings;
     'policy'?: GlobalProtectionPolicy;
     'postsubmits'?: Postsubmits;
     'presubmits'?: Presubmits;
     'schedulerAgent'?: SchedulerAgent;
     'trigger'?: Trigger;
+    'welcome'?: Array<Welcome>;
 
     static discriminator: string | undefined = undefined;
 
@@ -45,6 +51,11 @@ export interface SchedulerSpec {
             "name": "approve",
             "baseName": "approve",
             "type": "Approve"
+        },
+        {
+            "name": "attachments",
+            "baseName": "attachments",
+            "type": "Array<Attachment>"
         },
         {
             "name": "configUpdater",
@@ -65,6 +76,11 @@ export interface SchedulerSpec {
             "name": "merger",
             "baseName": "merger",
             "type": "Merger"
+        },
+        {
+            "name": "periodics",
+            "baseName": "periodics",
+            "type": "Periodics"
         },
         {
             "name": "plugins",
@@ -95,6 +111,11 @@ export interface SchedulerSpec {
             "name": "trigger",
             "baseName": "trigger",
             "type": "Trigger"
+        },
+        {
+            "name": "welcome",
+            "baseName": "welcome",
+            "type": "Array<Welcome>"
         }    ];
 
     static getAttributeTypeMap() {
