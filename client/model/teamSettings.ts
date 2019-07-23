@@ -49,6 +49,10 @@ export interface TeamSettings {
     'postPreviewJobs'?: Array<IoK8sApiBatchV1Job>;
     'promotionEngine'?: string;
     /**
+    * ProwConfig is the way we manage prow configurations
+    */
+    'prowConfig'?: string;
+    /**
     * ProwEngine is the kind of prow engine used such as knative build or build pipeline
     */
     'prowEngine'?: string;
@@ -180,6 +184,11 @@ export interface TeamSettings {
         {
             "name": "promotionEngine",
             "baseName": "promotionEngine",
+            "type": "string"
+        },
+        {
+            "name": "prowConfig",
+            "baseName": "prowConfig",
             "type": "string"
         },
         {
