@@ -12,17 +12,24 @@
 
 import { IoK8sApiCoreV1Container } from './ioK8sApiCoreV1Container';
 import { IoK8sApiRbacV1Role } from './ioK8sApiRbacV1Role';
+import { PipelineExtension } from './pipelineExtension';
 
 /**
 * AppSpec provides details of the metadata for an App
 */
 export interface AppSpec {
+    'pipelineExtension'?: PipelineExtension;
     'schemaPreprocessor'?: IoK8sApiCoreV1Container;
     'schemaPreprocessorRole'?: IoK8sApiRbacV1Role;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "pipelineExtension",
+            "baseName": "pipelineExtension",
+            "type": "PipelineExtension"
+        },
         {
             "name": "schemaPreprocessor",
             "baseName": "schemaPreprocessor",
