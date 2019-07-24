@@ -17,17 +17,33 @@ import { ResourceReference } from './resourceReference';
 */
 export interface SourceRepositorySpec {
     'description'?: string;
+    /**
+    * HTTPCloneURL is the git URL to clone this repository using HTTP/HTTPS
+    */
+    'httpCloneURL'?: string;
     'org'?: string;
     /**
     * Provider stores the URL of the git provider such as https://github.com
     */
     'provider'?: string;
     /**
+    * ProviderKind is the kind of provider (github / bitbucketcloud / bitbucketserver etc)
+    */
+    'providerKind'?: string;
+    /**
     * ProviderName is a logical name for the provider without any URL scheme which can be used in a label selector
     */
     'providerName'?: string;
     'repo'?: string;
     'scheduler'?: ResourceReference;
+    /**
+    * SSHCloneURL is the git URL to clone this repository using SSH
+    */
+    'sshCloneURL'?: string;
+    /**
+    * URL is the web URL of the project page
+    */
+    'url'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -38,6 +54,11 @@ export interface SourceRepositorySpec {
             "type": "string"
         },
         {
+            "name": "httpCloneURL",
+            "baseName": "httpCloneURL",
+            "type": "string"
+        },
+        {
             "name": "org",
             "baseName": "org",
             "type": "string"
@@ -45,6 +66,11 @@ export interface SourceRepositorySpec {
         {
             "name": "provider",
             "baseName": "provider",
+            "type": "string"
+        },
+        {
+            "name": "providerKind",
+            "baseName": "providerKind",
             "type": "string"
         },
         {
@@ -61,6 +87,16 @@ export interface SourceRepositorySpec {
             "name": "scheduler",
             "baseName": "scheduler",
             "type": "ResourceReference"
+        },
+        {
+            "name": "sshCloneURL",
+            "baseName": "sshCloneURL",
+            "type": "string"
+        },
+        {
+            "name": "url",
+            "baseName": "url",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
