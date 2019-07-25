@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { IoK8sApiCoreV1PodSpec } from './ioK8sApiCoreV1PodSpec';
 import { ReplaceableMapOfStringString } from './replaceableMapOfStringString';
 
 /**
@@ -37,6 +38,7 @@ export interface JobBase {
     * Namespace is the namespace in which pods schedule.   empty: results in scheduler.DefaultNamespace
     */
     'namespace'?: string;
+    'spec'?: IoK8sApiCoreV1PodSpec;
 
     static discriminator: string | undefined = undefined;
 
@@ -70,6 +72,11 @@ export interface JobBase {
             "name": "namespace",
             "baseName": "namespace",
             "type": "string"
+        },
+        {
+            "name": "spec",
+            "baseName": "spec",
+            "type": "IoK8sApiCoreV1PodSpec"
         }    ];
 
     static getAttributeTypeMap() {
