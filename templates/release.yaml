@@ -1,0 +1,24 @@
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2019-09-27T11:46:13Z"
+  deletionTimestamp: null
+  name: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+spec:
+  commits:
+  - author: {}
+    branch: master
+    committer: {}
+    message: |
+      fix: resolve path to jx-docs
+
+      Signed-off-by: Cai Cooper <caicooper82@gmail.com>
+    sha: 2ac76325ec39149a80d5462a58cc5d9d0c586efe
+  gitCloneUrl: https://github.com/jenkins-x/jenkins-x-versions.git
+  gitHttpUrl: https://github.com/jenkins-x/jenkins-x-versions
+  gitOwner: jenkins-x
+  gitRepository: jenkins-x-versions
+  name: '{{ .Chart.Name }}'
+  releaseNotesURL: https://github.com/jenkins-x/jenkins-x-versions/releases/tag/v1.0.93
+  version: 1.0.93
+status: {}
